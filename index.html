@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskHive — Professional Talent Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container site-nav-wrap">
+            <a class="brand" href="#hero">TaskHive</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="site-nav">
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#top-gigs">Top talent</a></li>
+                    <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero hero-marketplace">
+            <div class="container hero-copy">
+                <span class="eyebrow">Hire trusted freelance talent</span>
+                <h1>Find professionals for every project.</h1>
+                <p>TaskHive connects businesses and teams with expert freelancers for design, development, marketing, writing, and long-term collaboration.</p>
+                <form id="marketplace-search-form" class="marketplace-search">
+                    <label for="marketplace-search" class="sr-only">Search talent</label>
+                    <input id="marketplace-search" type="search" placeholder="Search talent or job categories" autocomplete="off">
+                    <button class="button primary" type="submit">Search talent</button>
+                </form>
+                <div class="hero-actions">
+                    <a class="button" href="#top-gigs">Browse talent</a>
+                    <a class="button" href="#contact">Post a job</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="section section-categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Popular categories</h2>
+                    <p>Choose the right talent for your project from top professional categories.</p>
+                </div>
+                <div class="category-grid">
+                    <article class="category-card" data-category="design">
+                        <h3>Graphic Design</h3>
+                        <p>Logos, branding, social media visuals, and more.</p>
+                    </article>
+                    <article class="category-card" data-category="writing">
+                        <h3>Writing & Translation</h3>
+                        <p>Copywriting, product descriptions, editing, and translation.</p>
+                    </article>
+                    <article class="category-card" data-category="tech">
+                        <h3>Tech & Development</h3>
+                        <p>Web development, app fixes, automation, and integrations.</p>
+                    </article>
+                    <article class="category-card" data-category="marketing">
+                        <h3>Digital Marketing</h3>
+                        <p>Ads, social campaigns, SEO, and growth strategy.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="top-gigs" class="section section-gigs">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured talent</h2>
+                    <p>Top-rated freelancers available for your next project.</p>
+                </div>
+                <div class="gig-grid" id="gig-grid">
+                    <article class="gig-card" data-title="Custom logo design" data-category="design">
+                        <div class="gig-label">Design</div>
+                        <h3>Brand identity and logo design</h3>
+                        <p>Professional branding with polished visuals, fast delivery, and clear communication.</p>
+                        <div class="gig-meta">
+                            <span>From $45</span>
+                            <span>24h delivery</span>
+                        </div>
+                    </article>
+                    <article class="gig-card" data-title="SEO blog post" data-category="writing">
+                        <div class="gig-label">Writing</div>
+                        <h3>SEO blog post</h3>
+                        <p>Well-researched, keyword-optimized content written to build traffic and authority.</p>
+                        <div class="gig-meta">
+                            <span>From $35</span>
+                            <span>48h delivery</span>
+                        </div>
+                    </article>
+                    <article class="gig-card" data-title="Landing page build" data-category="tech">
+                        <div class="gig-label">Development</div>
+                        <h3>Landing page development</h3>
+                        <p>Responsive landing pages designed for conversions, speed, and polished user experience.</p>
+                        <div class="gig-meta">
+                            <span>From $90</span>
+                            <span>3d delivery</span>
+                        </div>
+                    </article>
+                    <article class="gig-card" data-title="Social media ads" data-category="marketing">
+                        <div class="gig-label">Marketing</div>
+                        <h3>Social media campaign management</h3>
+                        <p>Strategic ads and campaign support to boost leads, engagement, and brand visibility.</p>
+                        <div class="gig-meta">
+                            <span>From $55</span>
+                            <span>48h delivery</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="section section-process">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How TaskHive works</h2>
+                    <p>Find talent faster, manage proposals, and hire professionals with confidence.</p>
+                </div>
+                <div class="process-grid">
+                    <article class="process-card">
+                        <h3>1. Post your job</h3>
+                        <p>Describe your project, timeline, and the skills you need.</p>
+                    </article>
+                    <article class="process-card">
+                        <h3>2. Review talent</h3>
+                        <p>Compare freelancers, portfolios, and proposal details to make the best hire.</p>
+                    </article>
+                    <article class="process-card">
+                        <h3>3. Collaborate and deliver</h3>
+                        <p>Work with your freelancer, request revisions, and approve the completed project.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-contact">
+            <div class="container contact-grid">
+                <div>
+                    <h2>Ready to hire talent?</h2>
+                    <p>Post your job and access freelancers who can deliver professional work quickly.</p>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Your email" required>
+
+                    <label for="message">Project details</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Describe your project or desired deliverable" required></textarea>
+
+                    <button class="button" type="submit">Post job</button>
+                    <p id="form-status" class="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <p>&copy; 2026 TaskHive. Professional freelance marketplace for businesses and teams.</p>
+            <p>Powered by trusted talent, smart hiring, and clear outcomes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

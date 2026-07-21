@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskHive Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="admin">
+    <header class="site-header">
+        <div class="container site-nav-wrap">
+            <a class="brand" href="index.html">TaskHive</a>
+            <nav class="site-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section admin-section">
+            <div class="container admin-panel">
+                <div class="admin-card" id="login-section">
+                    <h2>Admin login</h2>
+                    <p>Enter your admin password to manage form signups and site content.</p>
+                    <form id="admin-login-form" class="admin-form">
+                        <label for="admin-password">Password</label>
+                        <input id="admin-password" name="admin-password" type="password" placeholder="Enter admin password" required>
+                        <button class="button primary" type="submit">Login</button>
+                    </form>
+                    <p id="admin-status" class="form-status"></p>
+                </div>
+
+                <div class="admin-card hidden" id="dashboard-section">
+                    <div class="admin-dashboard-header">
+                        <div>
+                            <h2>Admin dashboard</h2>
+                            <p>Manage TaskHive content and review client job requests.</p>
+                        </div>
+                        <button class="button" id="logout-button" type="button">Logout</button>
+                    </div>
+
+                    <div class="admin-metrics">
+                        <div class="metric-card">
+                            <h3>Total signups</h3>
+                            <p id="signup-count">0</p>
+                        </div>
+                    </div>
+
+                    <section class="admin-card admin-settings">
+                        <h3>Hero content</h3>
+                        <form id="content-form" class="admin-form">
+                            <label for="hero-tagline">Tagline</label>
+                            <input id="hero-tagline" name="hero-tagline" type="text" placeholder="Hire trusted freelance talent" required>
+
+                            <label for="hero-title">Title</label>
+                            <input id="hero-title" name="hero-title" type="text" placeholder="Find professionals for every project." required>
+
+                            <label for="hero-description">Description</label>
+                            <textarea id="hero-description" name="hero-description" rows="4" placeholder="Describe the core marketplace message" required></textarea>
+
+                            <label for="book-button">Browse button text</label>
+                            <input id="book-button" name="book-button" type="text" placeholder="Browse talent" required>
+
+                            <label for="trailer-button">Action button text</label>
+                            <input id="trailer-button" name="trailer-button" type="text" placeholder="Post a job" required>
+
+                            <button class="button" type="submit">Save changes</button>
+                        </form>
+                    </section>
+
+                    <section class="admin-card admin-signups">
+                        <div class="admin-signups-header">
+                            <h3>Job requests</h3>
+                            <button class="button" id="clear-signups" type="button">Clear requests</button>
+                        </div>
+                        <div class="signup-list-wrap">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Message</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="signup-list"></tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <p>&copy; 2026 TaskHive Admin.</p>
+            <p><a class="footer-link" href="index.html">Back to site</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
