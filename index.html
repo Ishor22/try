@@ -4,15 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flight Ticket Booking</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="/">
+        <img src="images/logo.svg" alt="Fly Smart logo" class="site-logo" />
+      </a>
+      <nav class="site-nav">
+        <a href="#booking">Book</a>
+        <a href="#">Help</a>
+      </nav>
+    </div>
+  </header>
   <div class="hero">
     <div class="hero__content">
       <p class="eyebrow">Fly Smart</p>
       <h1>Book your next flight in minutes</h1>
       <p>Compare routes, choose seats, and confirm your booking with a simple and friendly experience.</p>
       <a class="hero__cta" href="#booking">Start Booking</a>
+    </div>
+  </div>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="contact__inner">
+      <h2>Contact us</h2>
+      <p>If you have questions about bookings or accounts, send us a message.</p>
+      <form id="contactForm" class="contact__form">
+        <label>
+          Your name
+          <input type="text" id="contactName" required />
+        </label>
+        <label>
+          Your email
+          <input type="email" id="contactEmail" required />
+        </label>
+        <label class="full-width">
+          Message
+          <textarea id="contactMessage" required></textarea>
+        </label>
+        <button type="submit" class="button">Send message</button>
+      </form>
+      <div id="contactResult" class="contact__result" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- Login modal (client-only mock) -->
+  <div id="loginModal" class="modal" aria-hidden="true">
+    <div class="modal__panel">
+      <button id="closeLogin" class="modal__close">×</button>
+      <h3>Sign in</h3>
+      <form id="loginForm">
+        <label>
+          Username or email
+          <input id="loginUser" type="text" required />
+        </label>
+        <label>
+          Password
+          <input id="loginPass" type="password" required />
+        </label>
+        <button class="button" type="submit">Sign in</button>
+      </form>
+      <p class="muted">This demo uses client-side mock authentication.</p>
     </div>
   </div>
 
@@ -118,5 +174,6 @@
   </section>
 
   <script src="script.js"></script>
+  <script src="auth.js"></script>
 </body>
 </html>

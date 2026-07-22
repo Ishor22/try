@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="index.html"><img src="images/logo.svg" alt="logo" class="site-logo"/></a>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="#">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <aside class="dashboard__sidebar">
+        <div class="dashboard__user">
+          <div class="avatar">U</div>
+          <div>
+            <div id="dashUserName" class="dashboard__name">User</div>
+            <div class="dashboard__email muted">demo@example.com</div>
+          </div>
+        </div>
+        <nav class="dashboard__menu">
+          <a href="#profile" class="active">Profile</a>
+          <a href="#bookings">My bookings</a>
+          <a href="#payments">Payments</a>
+          <a href="#settings">Settings</a>
+          <a href="#logout" id="logoutBtn">Log out</a>
+        </nav>
+      </aside>
+
+      <section class="dashboard__content">
+        <h2>Welcome back</h2>
+        <p id="welcome">Manage your bookings and account details here.</p>
+        <div id="contentArea"></div>
+      </section>
+    </main>
+
+    <script>
+      // Populate user info from localStorage
+      const userRaw = localStorage.getItem('mock_user');
+      if (!userRaw) {
+        location.href = 'index.html';
+      } else {
+        const user = JSON.parse(userRaw);
+        document.getElementById('dashUserName').textContent = user.username || 'User';
+        const avatar = document.querySelector('.avatar');
+        if (avatar) avatar.textContent = (user.username || 'U').charAt(0).toUpperCase();
+      }
+
+      document.getElementById('logoutBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.removeItem('mock_user');
+        location.href = 'index.html';
+      });
+    </script>
+  </body>
+</html>
