@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quick Login</title>
+  </head>
+  <body>
+    <p>Signing in as demo user…</p>
+    <script>
+      // Quick login using the credentials requested by the user
+      localStorage.setItem('mock_user', JSON.stringify({ username: 'try' }));
+      // small delay so the message can be seen then redirect
+      setTimeout(() => { location.href = 'dashboard.html'; }, 300);
+    </script>
+  </body>
+</html>

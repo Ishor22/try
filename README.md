@@ -30,3 +30,11 @@ Auth and dashboard (demo)
 
 - A simple client-side mock login exists for demo purposes. Click "Login" in the header, sign in with any username, and you'll be redirected to `dashboard.html`.
 - To clear the demo session, open the browser devtools and run `localStorage.removeItem('mock_user')` or use the "Log out" link on the dashboard.
+
+Quick one-click login
+
+- To sign in immediately as the demo user `try` (password: `try123` in the modal), open:
+
+	http://localhost:8000/quick-login.html
+
+	This will set the demo session and redirect you to `dashboard.html`.
