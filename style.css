@@ -238,6 +238,45 @@ textarea {
     padding: 2rem 1rem;
   }
 }
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero__content { max-width: 58%; }
+}
+
+@media (max-width: 900px) {
+  .site-header__inner { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .site-nav { order: 2; }
+  .site-logo { height: 40px; }
+  .hero { flex-direction: column; align-items: flex-start; padding: 2rem; }
+  .hero__content { max-width: 100%; }
+  .hero__cta { width: auto; }
+  .contact__inner, .booking__panel, .summary, .dashboard__sidebar, .dashboard__content { padding: 1rem; }
+  .booking { gap: 1rem; }
+}
+
+@media (max-width: 600px) {
+  html, body { font-size: 15px; }
+  .hero { padding: 1.25rem; }
+  .hero h1 { font-size: 1.9rem; }
+  .site-header__inner { align-items: center; }
+  .site-nav { display: flex; gap: 0.5rem; }
+  .site-nav a { font-size: 0.95rem; }
+  .row { grid-template-columns: 1fr; }
+  input, select, textarea, .button { font-size: 0.95rem; }
+  .modal__panel { width: 96%; padding: 1rem; }
+  .dashboard { flex-direction: column; }
+  .dashboard__sidebar { width: 100%; display: flex; gap: 1rem; align-items: center; padding: 0.75rem; }
+  .dashboard__menu { display: flex; gap: 0.75rem; overflow-x: auto; }
+  .dashboard__menu a { white-space: nowrap; }
+}
+
+@media (max-width: 420px) {
+  .hero h1 { font-size: 1.5rem; }
+  .eyebrow { font-size: 0.75rem; }
+  .site-logo { height: 34px; }
+  .contact__form input, .contact__form textarea { font-size: 0.95rem; }
+}
 @media (max-width: 600px) {
   .hero {
     padding: 3rem 1rem 2rem;
