@@ -3,16 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello Website</title>
+  <title>Flight Ticket Booking</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main>
-    <h1>Hello, world!</h1>
-    <p>Welcome to your new website.</p>
-    <button id="greetButton">Click for a greeting</button>
-    <p id="greeting"></p>
-  </main>
+  <div class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Fly Smart</p>
+      <h1>Book your next flight in minutes</h1>
+      <p>Compare routes, choose seats, and confirm your booking with a simple and friendly experience.</p>
+      <a class="hero__cta" href="#booking">Start Booking</a>
+    </div>
+  </div>
+
+  <section class="booking" id="booking">
+    <div class="booking__panel">
+      <h2>Flight booking form</h2>
+      <form id="bookingForm">
+        <div class="row">
+          <label>
+            Full name
+            <input type="text" id="fullName" placeholder="Jane Doe" required />
+          </label>
+          <label>
+            Email address
+            <input type="email" id="email" placeholder="jane@example.com" required />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            From
+            <select id="fromAirport" required>
+              <option value="">Select origin</option>
+              <option value="NYC">New York (NYC)</option>
+              <option value="LAX">Los Angeles (LAX)</option>
+              <option value="LHR">London (LHR)</option>
+              <option value="DXB">Dubai (DXB)</option>
+            </select>
+          </label>
+          <label>
+            To
+            <select id="toAirport" required>
+              <option value="">Select destination</option>
+              <option value="PAR">Paris (PAR)</option>
+              <option value="TYO">Tokyo (TYO)</option>
+              <option value="SYD">Sydney (SYD)</option>
+              <option value="CPT">Cape Town (CPT)</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            Departure
+            <input type="date" id="departureDate" required />
+          </label>
+          <label>
+            Return
+            <input type="date" id="returnDate" />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            Passengers
+            <input type="number" id="passengers" min="1" max="9" value="1" required />
+          </label>
+          <label>
+            Class
+            <select id="travelClass" required>
+              <option value="economy">Economy</option>
+              <option value="premium">Premium Economy</option>
+              <option value="business">Business</option>
+              <option value="first">First Class</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="full-width">
+          Additional requests
+          <textarea id="notes" placeholder="Seat preferences, meal requests, special assistance..."></textarea>
+        </label>
+
+        <button type="submit" class="button">Book Flight</button>
+      </form>
+    </div>
+
+    <aside class="summary" id="bookingSummary">
+      <h2>Booking summary</h2>
+      <p>Fill out the form to see a preview of your flight details.</p>
+      <div class="summary__details">
+        <strong>Traveler</strong>
+        <p id="summaryName">—</p>
+      </div>
+      <div class="summary__details">
+        <strong>Route</strong>
+        <p id="summaryRoute">—</p>
+      </div>
+      <div class="summary__details">
+        <strong>Dates</strong>
+        <p id="summaryDates">—</p>
+      </div>
+      <div class="summary__details">
+        <strong>Class</strong>
+        <p id="summaryClass">—</p>
+      </div>
+      <div class="summary__details">
+        <strong>Passengers</strong>
+        <p id="summaryPassengers">—</p>
+      </div>
+      <div class="summary__notice" id="summaryNotice">Once submitted, your booking details will appear here.</div>
+    </aside>
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>

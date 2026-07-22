@@ -1,13 +1,22 @@
-# Hello Website
+# Flight Ticket Booking Website
 
-A simple hello website with HTML, CSS, and JavaScript.
+A simple static flight ticket booking website with a responsive booking form.
 
 ## Files
 
-- `index.html` - Main page
-- `style.css` - Styling for the page
-- `script.js` - Button greeting behavior
+- `index.html` - Main booking page
+- `style.css` - Styling for layout and forms
+- `script.js` - Booking form handling and summary preview
 
 ## Run
 
-Open `index.html` in your browser to view the site.
+Open `index.html` in your browser, or serve the folder using a local web server:
+
+```bash
+cd c:\Users\PC\Documents\try
+python -m http.server 8000
+```
+
+Then visit:
+
+http://localhost:8000
